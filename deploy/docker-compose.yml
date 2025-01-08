@@ -1,0 +1,15 @@
+version: "3.7"
+services:
+  spring:
+    container_name: spring
+    image: insoo0111/ending-credits
+    ports:
+      - "8080:8080"
+    volumes:
+      - /var/log/:/logs/
+    networks:
+      - api-net
+
+networks:
+  api-net:
+    driver: bridge
